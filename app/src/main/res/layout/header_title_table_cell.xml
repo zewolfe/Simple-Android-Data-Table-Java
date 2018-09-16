@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/data_table_row_height">
+
+    <TextView
+        android:id="@+id/textview_table_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Testing" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/data_table_header_border_size"
+        android:background="@color/colorTableBorder"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:layout_width="@dimen/data_table_header_border_size"
+        android:layout_height="match_parent"
+        android:background="@color/colorTableBorder"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

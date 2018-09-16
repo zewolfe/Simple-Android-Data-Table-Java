@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="data_table_row_height">48dp</dimen>
+    <dimen name="data_table_border_size">1dp</dimen>
+    <dimen name="data_table_header_border_size">2dp</dimen>
+</resources>
