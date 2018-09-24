@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 
 import com.wolfpack.simpleandroiddatatablejava.R;
@@ -18,6 +19,7 @@ import java.util.List;
 public class DataTable extends ConstraintLayout {
     private TitlesAdapter titlesAdapter;
     private DataAdapter dataAdapter;
+    private StickyHeader stickyHeader;
 
     public DataTable(Context context) {
         super(context);
@@ -57,10 +59,17 @@ public class DataTable extends ConstraintLayout {
 
         ScrollBinder scrollBinder = new ScrollBinder(titlesRecyclerView, dataRecyclerView);
         scrollBinder.bind();
+
+        ViewGroup headerTitle = findViewById(R.id.header_title);
+        ViewGroup headerColumns = findViewById(R.id.header_columns);
+
+        stickyHeader = new StickyHeader(headerTitle, headerColumns);
+        dataRecyclerView.addOnScrollListener(stickyHeader);
     }
 
     public void setRows(List<Row> rows) {
         titlesAdapter.setRows(rows);
         dataAdapter.setRows(rows);
+        stickyHeader.setRows(rows);
     }
 }

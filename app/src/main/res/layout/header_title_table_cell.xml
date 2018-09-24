@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorHeaderBackground"
     android:layout_width="match_parent"
     android:layout_height="@dimen/data_table_row_height">
 
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Testing" />
+        android:text="@string/lorem_title"/>
 
     <View
         android:layout_width="match_parent"

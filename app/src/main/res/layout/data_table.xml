@@ -5,11 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/titlesRecyclerView"
+    <FrameLayout
+        android:id="@+id/titlesFrame"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        app:layout_constraintWidth_percent="0.3" />
+        app:layout_constraintWidth_percent="0.3">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/titlesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/header_title"
+            layout="@layout/header_title_table_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -19,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/titlesRecyclerView">
+        app:layout_constraintStart_toEndOf="@+id/titlesFrame">
 
         <FrameLayout
             android:layout_width="wrap_content"
@@ -28,7 +42,14 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/dataRecyclerView"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"/>
+
+        <include
+            android:id="@+id/header_columns"
+            layout="@layout/dessert_table_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.7"/>
 
         </FrameLayout>
     </HorizontalScrollView>

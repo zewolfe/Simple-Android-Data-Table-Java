@@ -1,7 +1,7 @@
 package com.wolfpack.simpleandroiddatatablejava;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -9,8 +9,8 @@ import com.wolfpack.simpleandroiddatatablejava.datatable.DataTable;
 import com.wolfpack.simpleandroiddatatablejava.datatable.rows.DessertRow;
 import com.wolfpack.simpleandroiddatatablejava.datatable.rows.HeaderRow;
 import com.wolfpack.simpleandroiddatatablejava.datatable.rows.Row;
-import com.wolfpack.simpleandroiddatatablejava.models.Dessert;
 import com.wolfpack.simpleandroiddatatablejava.models.Data;
+import com.wolfpack.simpleandroiddatatablejava.models.Dessert;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String loadJSONFromAsset(String filename) {
-        String json = null;
+        String json;
         try {
             InputStream is = this.getAssets().open(filename);
             int size = is.available();

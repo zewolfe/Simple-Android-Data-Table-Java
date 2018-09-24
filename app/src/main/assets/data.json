@@ -69,6 +69,21 @@
       {
         "title": "Eclair",
         "data": [262, 16, 24, 6, 12]
+      },
+      {
+        "title": "Eclair",
+        "data": [262, 16, 24, 6, 12]
+      },      {
+        "title": "Frozen Yogurt",
+        "data": [159, 6, 24, 40, 8]
+      },
+      {
+        "title": "Ice cream sandwich",
+        "data": [237, 9, 37, 4.3, 12]
+      },
+      {
+        "title": "Eclair",
+        "data": [262, 16, 24, 6, 12]
       }
     ]
   }
